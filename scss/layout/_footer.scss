@@ -1,0 +1,98 @@
+// FOOTER STYLING
+footer {
+  position: relative;
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b5dfb5;
+    z-index: -1;
+  }
+  .container {
+    position: relative;
+    .row {
+      border-bottom: 2px solid #fff;
+      h3 {
+        @include footer-chivo-font(#00293f, 2rem, 600);
+      }
+
+      li {
+        @include overpass-font(#000, 1.5rem, 400);
+        padding: 0.3rem;
+        a {
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+      .footer-col-1 {
+        p {
+          @include margin-top(2rem);
+          @include footer-chivo-font(#000, 1.5rem, 400);
+          @include line-clamp(4);
+        }
+        a {
+          @include margin-top(2rem);
+          @include overpass-font(#2c2d75, 1.3rem, 500);
+          display: block;
+          text-align: end;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+      .footer-col-4 {
+        .get-in-touch {
+          list-style: none;
+          padding: 0;
+          li {
+            a {
+              text-align: left;
+            }
+          }
+        }
+        .payment-partner {
+          @include icon-center();
+          justify-content: initial;
+          column-gap: 2rem;
+        }
+      }
+    }
+    .footer-copyright {
+      padding-top: 2.5rem;
+      @include overpass-font(#000, 1.5rem, 400);
+      span {
+        display: block;
+        a {
+          font-weight: bold;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .messenger-anchor {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      .messenger {
+        @include icon-size(1rem, 1rem, 4rem);
+        background-color: #1db14b;
+        @include border-radius(50%);
+        @include box-shadow(0, 0, 1rem, #1db14b);
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          background-color: blue;
+          @include box-shadow(0, 0, 1rem, blue);
+        }
+      }
+    }
+  }
+}

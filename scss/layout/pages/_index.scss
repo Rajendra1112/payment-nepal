@@ -1,0 +1,348 @@
+// HOME SECTION STYLING
+.home-section {
+  background-color: $light-bg;
+  .home-description {
+    P {
+      @include overpass-font(#1d6b2c, 2.5rem, 500);
+    }
+    a {
+      padding: 1rem 2rem;
+      @include chivo-font($light-text, 2.5rem, 400);
+      background-color: $light-green-bg;
+      border: 1px solid $light-green-bg;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        @include box-shadow(0, 0, 0.8rem, green);
+      }
+    }
+  }
+}
+/* OWL CAROUSEL DOTS STYLING  */
+.img-carousel {
+  .owl-dot {
+    span {
+      width: 1rem !important;
+      background-color: #5bb95b !important;
+    }
+    &:hover {
+      span {
+        background-color: green !important;
+      }
+    }
+  }
+}
+
+.owl-dot.active span {
+  width: 2rem !important;
+  background-color: rgb(9, 91, 9) !important;
+}
+
+// ABOUT SECTION STYLING
+.about-section {
+  @include margin-top(2rem);
+  .container {
+    .row {
+      figure {
+        position: relative;
+        a {
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @include icon-center();
+          @include icon-size(0, 2rem, 6rem);
+          transition: all 0.4s ease-in-out;
+          &:hover {
+            background: #3133d6;
+          }
+        }
+      }
+      .about-description {
+        .about-detail {
+          @include overpass-font(#000, 2rem, 300);
+          @include line-clamp(3);
+          line-height: 28px; /* 140% */
+          letter-spacing: 0.6px;
+        }
+
+        a {
+          margin-top: 2rem;
+          @include chivo-font($blue-text, 2.5rem, 500);
+          transition: all 0.4s ease-in-out;
+          &:hover {
+            color: $green-text;
+          }
+        }
+      }
+    }
+  }
+}
+
+// PAYMENT SOLUTION SECTION STYLING
+.payment-solution-section {
+  position: relative;
+  width: 100%;
+  padding-top: 4rem;
+  &::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 29.4rem;
+    z-index: -1;
+    background-color: #d7f5dc;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  p {
+    @include overpass-font(#000, 2rem, 400);
+    text-align: center;
+  }
+  .row {
+    .payment-card {
+      @include box-shadow(0, 0.1rem, 0.6rem, gray);
+      padding: 2rem;
+      border-radius: 3rem;
+      height: 100%;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        @include box-shadow(0, 0.1rem, 0.9rem, rgb(76, 74, 74));
+        background-color: #d7f5dc;
+      }
+      .outer-payment-icon {
+        @include icon-center();
+      }
+      .inner-payment-icon {
+        @include icon-size(0, 1.2rem, 5rem);
+        @include border-radius(1rem);
+      }
+      .card-body {
+        h5 {
+          @include chivo-font(#2c2d75, 2rem, 400);
+          @include margin-top(2rem);
+        }
+        p {
+          @include overpass-font(#000, 1.5rem, 300);
+          @include line-clamp(2);
+          @include margin-top(2rem);
+        }
+        a {
+          @include chivo-font($blue-text, 1.3rem, 500);
+          @include margin-top(2rem);
+        }
+      }
+    }
+  }
+}
+
+// PAYMENT FEATURE SECTION STYLING
+.payment-feature-section {
+  .container {
+    @include margin-top(4rem);
+    .row {
+      @include margin-top(8rem);
+      row-gap: 7rem;
+      .feature-card {
+        height: 100%;
+        border-radius: 0;
+        @include box-shadow(0, 0.1rem, 0.6rem, gray);
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          @include box-shadow(0, 0.1rem, 0.9rem, rgb(76, 74, 74));
+          background-color: #d7f5dc;
+        }
+        .outer-feature-icon {
+          @include icon-center();
+          margin-top: -5rem;
+        }
+        .inner-feature-icon {
+          @include icon-size(1rem, 2rem, 5rem);
+          @include border-radius(50%);
+        }
+        .card-body {
+          padding: 1rem 3rem 3rem;
+          h5 {
+            @include chivo-font(#2c2d75, 2rem, 400);
+            @include margin-top(2rem);
+          }
+          p {
+            @include overpass-font(#000, 1.5rem, 300);
+            @include line-clamp(3);
+            @include margin-top(2rem);
+          }
+          a {
+            display: block;
+            text-align: end;
+            @include chivo-font($blue-text, 1.3rem, 500);
+            @include margin-top(2rem);
+          }
+        }
+      }
+    }
+  }
+}
+
+// INDUSTRY CHANGE SECTION STYLING
+.industry-change-section {
+  @include margin-top(4rem);
+  position: relative;
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d7f5dc;
+    z-index: -1;
+  }
+  .container {
+    .row {
+      ul {
+        li {
+          @include overpass-font(#000, 2.5rem, 400);
+          letter-spacing: 0.9px;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// SERVICE SECTION STYLING
+.service-section {
+  @include margin-top(4rem);
+  .container {
+    .row {
+      .service-data {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        .service-col {
+          display: flex;
+          column-gap: 1rem;
+          .service-col-text {
+            h3 {
+              @include chivo-font(#2c2d75, 1.6rem, bold);
+              letter-spacing: 0.6px;
+            }
+            h4 {
+              @include overpass-font(#000, 1.6rem, 400);
+              letter-spacing: -0.2px;
+            }
+          }
+          .outer-service-icon {
+            @include icon-center();
+          }
+          .inner-service-icon {
+            @include icon-size(0, 1rem, 4rem);
+            @include border-radius(1rem);
+          }
+        }
+      }
+    }
+  }
+}
+
+// ADVERTISEMENT SECTION STYLING
+.advertisement-section {
+  @include margin-top(4rem);
+  position: relative;
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d7f5dc;
+    z-index: -1;
+  }
+  .container {
+    .row {
+      .text-ads {
+        p {
+          @include overpass-font(#000, 2rem, 400);
+          letter-spacing: 0.2px;
+        }
+      }
+      .sponser-ads {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+    }
+  }
+}
+
+// TESTIMONIAL SECTION STYLING
+.testimonial-section {
+  @include margin-top(4rem);
+  .container {
+    .testimonial-carousel {
+      .owl-prev {
+        @include custom-carousel-nav(1%, initial);
+      }
+      .owl-next {
+        @include custom-carousel-nav(initial, 1%);
+      }
+    }
+    .testimonial-card {
+      width: 80%;
+      margin: 2rem auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 5rem;
+      @include box-shadow(0, 0.1rem, 1rem, gray);
+      .customer-photo {
+        position: relative;
+        width: 25%;
+        &::after {
+          content: "";
+          background-color: #5bb95b;
+          position: absolute;
+          top: -2rem;
+          left: -2rem;
+          width: 70%;
+          height: 60%;
+          z-index: -1;
+        }
+      }
+      .customer-thought {
+        width: 60%;
+        .inverted-comma {
+          width: 6.2rem;
+        }
+        p {
+          @include overpass-font(#000, 2rem, 500);
+          .customer-name {
+            @include margin-top(1rem);
+            display: block;
+            @include overpass-font(#2c2d75, 2rem, 700);
+          }
+          .social-media {
+            display: flex;
+            column-gap: 1rem;
+            font-size: 3rem;
+            a {
+              i {
+                color: #2c2d75;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

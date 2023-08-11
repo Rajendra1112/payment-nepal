@@ -1,0 +1,118 @@
+// chivo font for various size,color,weight
+@mixin chivo-font($color, $size, $weight) {
+  color: $color;
+  font-family: Chivo;
+  font-size: $size;
+  font-style: normal;
+  font-weight: $weight;
+  line-height: normal;
+}
+
+@mixin footer-chivo-font($color, $size, $weight) {
+  color: $color;
+  text-align: justify;
+  font-family: Chivo;
+  font-size: $size;
+  font-style: normal;
+  font-weight: $weight;
+  line-height: normal;
+}
+
+// overpass font for various size,color,weight
+@mixin overpass-font($color: #000, $size: 1.6rem, $weight: 400) {
+  color: $color;
+  font-family: Overpass;
+  font-size: $size;
+  font-style: normal;
+  font-weight: $weight;
+  line-height: normal;
+}
+
+@mixin button-text($color, $size, $weight) {
+  color: $color;
+  text-align: justify;
+  font-family: Chivo;
+  font-size: $size;
+  font-style: normal;
+  font-weight: $weight;
+  line-height: normal;
+}
+
+@mixin line-clamp($line-no) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-no;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// margin from top mixin
+@mixin margin-top($value) {
+  margin-top: $value;
+}
+
+// border radius
+@mixin border-radius($value) {
+  border-radius: $value;
+}
+
+// box shadow
+@mixin box-shadow($hos, $vos, $blur, $color) {
+  box-shadow: $hos $vos $blur $color;
+}
+
+// to position icon on center
+@mixin icon-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// icon size
+@mixin icon-size($py, $px, $fs) {
+  color: #fff;
+  background: #5bb95b;
+  padding: $py $px;
+  font-size: $fs;
+}
+
+@mixin custom-carousel-nav($left-shift, $right-shift) {
+  width: 5.7rem;
+  height: 5.7rem;
+  @include icon-center();
+  @include icon-size(0, 0, 5rem);
+  @include border-radius(50%);
+  position: absolute;
+  top: 50%;
+  left: $left-shift;
+  right: $right-shift;
+  margin: 0;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  background: #b5dfb5;
+}
+
+// figure for small device at center
+@mixin small-center-fig() {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@mixin small-section-heading() {
+  font-size: 2rem;
+}
+
+@mixin small-section-title() {
+  font-size: 1.6rem;
+}
+
+@mixin small-font() {
+  font-size: 1.6rem;
+}
+
+@mixin breadcrumb-item-size() {
+  li,
+  a {
+    font-size: 2rem;
+    color: #2c2d75;
+  }
+}

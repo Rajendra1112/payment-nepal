@@ -1,0 +1,61 @@
+.cup-contact-section {
+  .container {
+    .breadcrumb {
+      @include breadcrumb-item-size();
+    }
+    .contact-row-1 {
+      justify-content: center;
+      align-items: center;
+      .contact-text {
+        span {
+          display: block;
+          font-size: 2rem;
+          color: black;
+        }
+      }
+    }
+    .section-title {
+      @include chivo-font(#2c2d75, 3.6rem, 600);
+    }
+    .contact-row-2 {
+      .contact-detail {
+        @include overpass-font(#1db14b, 2rem, 700);
+        i {
+          font-size: 4rem;
+        }
+        span {
+          display: block;
+          color: #000;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .contact-row-3 {
+      figure {
+        margin: 0;
+      }
+      form {
+        padding: 6rem;
+        @include overpass-font(#000, 2rem, 400);
+        background-color: #d7f5dc;
+        border-radius: 10% 0;
+        .form-control {
+          background: transparent;
+          border: 1px solid gray;
+          outline: none;
+          padding: 1rem;
+          border-radius: 0;
+        }
+        .btn {
+          background-color: #1db14b;
+          padding: 1rem;
+          @include overpass-font(#fff, 2rem, 400);
+          @include border-radius(1rem);
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+// HEADER STYLING
+header {
+  background-color: $light-green-bg;
+
+  a {
+    color: white;
+  }
+
+  .container {
+    @include chivo-font(#fff, 1.8rem, 400);
+
+    .row {
+      width: 100%;
+      text-align: center;
+      .phone {
+        border-right: 2px solid white;
+      }
+      .email {
+        border-right: 2px solid white;
+      }
+      .social-media {
+        border-right: 2px solid white;
+        a {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// NAVBAR STYLING
+.navbar {
+  background-color: $light-bg;
+  .container {
+    .navbar-form {
+      border: none;
+      outline: none;
+      position: relative;
+      padding: 0 3rem;
+
+      .form-control {
+        border: 1px solid black;
+        width: 100%;
+        height: 100%;
+        padding: 2vh 4vw;
+        @include chivo-font(#2c2d75, 1.5rem, 400);
+      }
+
+      i {
+        font-size: 1.5rem;
+        color: #2c2d75;
+        position: absolute;
+        top: 50%;
+        left: 4vw;
+        transform: translate(0, -50%);
+      }
+    }
+
+    .navbar-nav {
+      column-gap: 0.5rem;
+      a[data-bs-toggle="dropdown"] {
+        @include chivo-font(#2c2d75, 1.5rem, 600);
+      }
+    }
+
+    li {
+      a {
+        @include chivo-font(#2c2d75, 1.5rem, 600);
+      }
+    }
+  }
+}

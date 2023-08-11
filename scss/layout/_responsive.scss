@@ -1,0 +1,103 @@
+@media (max-width: 1024px) {
+  .navbar {
+    .navbar-brand {
+      margin: 0;
+    }
+    .navbar-nav {
+      a {
+        font-size: 1.3rem !important;
+        font-weight: 600 !important;
+      }
+    }
+  }
+}
+
+// TABLET DEVICES(medium devices)
+@media (max-width: 992px) {
+  header {
+    .container {
+      .row {
+        row-gap: 1rem;
+        .email {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  //   PAYMENT SOLUTION SECTION STYLING
+  .payment-solution-section {
+    .row {
+      row-gap: 1.5rem;
+    }
+  }
+}
+
+// small device -768px
+@media (max-width: 768px) {
+  header {
+    .container {
+      .row {
+        .phone,
+        .social-media {
+          border-right: none;
+        }
+      }
+    }
+  }
+  .navbar {
+    i {
+      left: 75% !important;
+    }
+  }
+}
+
+// MOBILE DEVICES - 576px very small devices
+@media (max-width: 576px) {
+  .navbar {
+    .navbar-brand {
+      margin: 0 auto;
+    }
+  }
+
+  .section-heading {
+    font-size: 2.6rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+
+  a,
+  p,
+  li {
+    font-size: 1.6rem !important;
+  }
+
+  .testimonial-card {
+    display: block !important;
+    .customer-photo {
+      display: none;
+    }
+    .customer-thought {
+      width: 100% !important;
+    }
+    padding: 1rem 1rem !important;
+  }
+  .owl-nav {
+    display: none;
+  }
+
+  // faq page serach bar
+  .search-bar {
+    width: 90vw !important;
+    height: 15vw !important;
+    i {
+      font-size: 2rem !important;
+    }
+    .form-control {
+      padding: 0 2rem !important;
+      font-size: 1.5rem !important;
+    }
+  }
+  // end of responsive
+}
